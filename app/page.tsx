@@ -368,9 +368,6 @@ export default function Page() {
               </tbody>
             </table>
 
-            <div style={{ marginTop: 12, color: "#4b5563", fontSize: 13 }}>
-              Tip: si querés que esto quede “persistente”, lo guardamos en <code>localStorage</code> en 10 líneas.
-            </div>
           </div>
         </div>
       </section>
