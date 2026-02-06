@@ -44,14 +44,20 @@ export default function Page() {
   const [cohereEmbedTokens, setCohereEmbedTokens] = useState<number>(96);
   const [requestsPerMonth, setRequestsPerMonth] = useState<number>(10000);
 
-  // Default price tables (podés editarlas en UI)
+  // Default price tables (podés editarlas en UI) - Fuente: https://platform.openai.com/docs/pricing
   const [prices, setPrices] = useState<PriceRow[]>([
-    // OpenAI
-    { kind: "openai", model: "gpt-4o-mini", inputPer1M: 0.3, outputPer1M: 1.2 },
-    { kind: "openai", model: "gpt-4.1-nano", inputPer1M: 0.2, outputPer1M: 0.8 },
-    { kind: "openai", model: "gpt-4.1-mini", inputPer1M: 0.8, outputPer1M: 3.2 },
-    { kind: "openai", model: "gpt-4.1", inputPer1M: 3.0, outputPer1M: 12.0 },
-    { kind: "openai", model: "gpt-4o", inputPer1M: 3.75, outputPer1M: 15.0 },
+    // OpenAI - precios por 1M tokens (USD)
+    { kind: "openai", model: "gpt-5.2", inputPer1M: 1.75, outputPer1M: 14.0 },
+    { kind: "openai", model: "gpt-5.1", inputPer1M: 1.25, outputPer1M: 10.0 },
+    { kind: "openai", model: "gpt-5", inputPer1M: 1.25, outputPer1M: 10.0 },
+    { kind: "openai", model: "gpt-5-mini", inputPer1M: 0.25, outputPer1M: 2.0 },
+    { kind: "openai", model: "gpt-5-nano", inputPer1M: 0.05, outputPer1M: 0.4 },
+    { kind: "openai", model: "gpt-4.1", inputPer1M: 2.0, outputPer1M: 8.0 },
+    { kind: "openai", model: "gpt-4.1-mini", inputPer1M: 0.4, outputPer1M: 1.6 },
+    { kind: "openai", model: "gpt-4.1-nano", inputPer1M: 0.1, outputPer1M: 0.4 },
+    { kind: "openai", model: "gpt-4o", inputPer1M: 2.5, outputPer1M: 10.0 },
+    { kind: "openai", model: "gpt-4o-2024-05-13", inputPer1M: 5.0, outputPer1M: 15.0 },
+    { kind: "openai", model: "gpt-4o-mini", inputPer1M: 0.15, outputPer1M: 0.6 },
 
     // Cohere embeddings
     { kind: "cohere-embed", model: "embed-english-v3.0", inputPer1M: 0.1 },
